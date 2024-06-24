@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Output</title>
+</head>
+<body>
+  <script>
+    
+    const resume = {
+      name: "KARTHIKEYAN S",
+      title: "Software Developer",
+      contact: {
+        email: "karthikoff87@gmail.com",
+        phone: "6380146826",
+        location: "Sivaganga"
+      },
+      summary: "Experienced software developer with a passion for creating efficient solutions.",
+      experience: [
+        {
+          title: "Web development intern",
+          company: "Techzy Solutions",
+          location: "coimbatore",
+          date: "Jan 2024",
+          description: "Developed web application"
+        },
+        {
+          title: "Web development intern",
+          company: "ATS solution",
+          location: "coimbatore",
+          date: "Jun 2023 - Dec 2023",
+          description: "Developed web applications"
+        }
+      ],
+      education: [
+        {
+          degree: "Bachelor of technology in information technology",
+          institution: "SNS COLLEGE OF ENGINEERING",
+          location: "Coimbatore",
+          date: "2020 - 2024"
+        }
+      ],
+      skills: [
+        "JavaScript",
+        "java",
+        "React.js",
+        "Node.js",
+        "SQL"
+      ],
+      certifications: [
+        "Full stack web development - Prepinsta",
+        "Java - Prepinsta"
+      ],
+      projects: [
+        {
+          name: "Realestate Website",
+          description: "Developed a responsive realestate website using React.js and Node.js."
+        },
+        {
+          name: "Portfolio resume",
+          description: "Developed a responsive portfolio website"
+        }
+      ],
+      languages: [
+        {
+          language: "TAMIL",
+          proficiency: "Native"
+        },
+        {
+          language: "ENGLISH",
+          proficiency: "Intermediate"
+        }
+      ]
+    };
+
+    
+    function printResumeToConsole() {
+      console.log(`Resume of ${resume.name}`);
+      console.log(`Title: ${resume.title}`);
+      console.log(`Contact:`);
+      console.log(`Email: ${resume.contact.email}`);
+      console.log(`Phone: ${resume.contact.phone}`);
+      console.log(`Location: ${resume.contact.location}`);
+      console.log(`Summary: ${resume.summary}\n`);
+
+      console.log(`Experience:`);
+      resume.experience.forEach((exp, index) => {
+        console.log(`- ${exp.title}`);
+        console.log(`  ${exp.company}, ${exp.location}`);
+        console.log(`  ${exp.date}`);
+        console.log(`  ${exp.description}`);
+        if (index < resume.experience.length - 1) {
+          console.log('\n');
+        }
+      });
+
+      console.log(`\nEducation:`);
+      resume.education.forEach((edu, index) => {
+        console.log(`- ${edu.degree}`);
+        console.log(`  ${edu.institution}, ${edu.location}`);
+        console.log(`  ${edu.date}`);
+        if (index < resume.education.length - 1) {
+          console.log('\n');
+        }
+      });
+
+      console.log(`\nSkills:`);
+      resume.skills.forEach(skill => {
+        console.log(`- ${skill}`);
+      });
+
+      console.log(`\nCertifications:`);
+      resume.certifications.forEach(cert => {
+        console.log(`- ${cert}`);
+      });
+
+      console.log(`\nProjects:`);
+      resume.projects.forEach(project => {
+        console.log(`- ${project.name}`);
+        console.log(`  ${project.description}`);
+      });
+
+      console.log(`\nLanguages:`);
+      resume.languages.forEach(lang => {
+        console.log(`- ${lang.language}: ${lang.proficiency}`);
+      });
+    }
+
+    
+    printResumeToConsole();
+  </script>
+</body>
+</html>
