@@ -1,0 +1,69 @@
+In JavaScript, when dealing with web browsers and manipulating their content,
+understanding the difference between window, screen, and document is essential.
+These are all objects that represent different aspects of the browser environment and the content it displays.
+
+Window Object (window):
+
+The window object represents the browser window that contains the document loaded into the window.
+It is the top-level object in the browser's JavaScript hierarchy and acts as a global object for the current 
+browsing context.
+
+The window object provides access to various properties and methods related to the browser window, such as:
+
+window.document:
+
+ Returns the document object associated with the current window.
+
+window.location:
+
+ Provides information about the current URL and allows navigation to new URLs.
+
+window.alert(), window.prompt(), window.confirm(): 
+
+Methods for displaying alert, prompt, and confirmation dialogs.
+
+window.setTimeout(), window.setInterval():
+
+ Methods for scheduling execution of functions after a specified delay
+or at regular intervals.
+
+It also serves as the global scope for JavaScript code executed within the browser.
+
+Document Object (document):
+
+The document object represents the HTML document that is currently displayed in the browser window.
+
+It is a property of the window object (window.document) and provides methods and properties to manipulate the 
+content and structure of the document.
+
+The document object allows you to access and modify elements in the HTML document using methods like
+ getElementById(), getElementsByClassName(), querySelector(), querySelectorAll().
+
+It provides access to properties like document.title (to get or set the title of the document), document.body 
+(to access the <body> element of the document), and document.cookie (to manipulate cookies).
+Screen Object (screen):
+
+The screen object represents the properties of the screen on which the current window is being rendered.
+It provides information such as the dimensions of the screen (screen.width, screen.height), color depth 
+(screen.colorDepth), and pixel density (screen.pixelDepth).
+
+
+The screen object is useful for determining the available screen size and resolution, which can be used for 
+responsive design or adjusting layouts based on screen properties.
+
+Summary:
+
+window: 
+
+Represents the entire browser window and acts as the global object for the current browsing context.
+It provides access to the document object, among other browser-related properties and methods.
+
+document: 
+
+Represents the HTML document loaded into the browser window and provides methods and properties to
+interact with and manipulate the document's content and structure.
+
+screen: 
+
+Represents the properties of the screen where the browser window is being displayed, such as dimensions
+and color depth. It provides information about the physical characteristics of the screen.
